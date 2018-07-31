@@ -1,12 +1,9 @@
-/*
-#include "portmap.h"
-
 void testFlash(){
   
+digitalWrite(0, HIGH);
 digitalWrite(A2,LOW);
-digitalWrite(P0, HIGH);
+delay(500);
+digitalWrite(A2,HIGH);
 
-delay(100);
-  
 }
-*/
+
