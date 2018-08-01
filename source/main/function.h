@@ -1,5 +1,13 @@
 #define fastblink 30
 #define medblink 200
+void PlaneClear(){
+  
+  for(int i = 2; i <= 10;i++){
+
+     digitalWrite(i, LOW);
+
+    }
+}
 
 void testFlash(){
   
@@ -111,7 +119,110 @@ void planeSweep(){
 }
 
 void triSweep(){
-	//make the columns come and go in 3's
+
+	digitalWrite(A0, LOW);
+	
+	digitalWrite(A0, LOW);
+  
+  for(int i = 2; i <= 4; i++){
+
+    digitalWrite(i, HIGH);
+
+    }
+
+	delay(medblink);
+	PlaneClear();
+	delay(medblink);
+  
+  for(int i = 5; i <= 7; i++){
+
+    digitalWrite(i, HIGH);
+
+    }
+
+	delay(medblink);
+	PlaneClear();
+	delay(medblink);
+
+  for(int i = 8; i <= 10; i++){
+
+    digitalWrite(i, HIGH);
+
+    }
+
+	delay(medblink);
+	PlaneClear();
+	delay(medblink);
+	
+	digitalWrite(A0, HIGH);
+	digitalWrite(A1, LOW);
+
+  for(int i = 2; i <= 4; i++){
+
+    digitalWrite(i, HIGH);
+
+    }
+
+	delay(medblink);
+	PlaneClear();
+	delay(medblink);
+  
+  for(int i = 5; i <= 7; i++){
+
+    digitalWrite(i, HIGH);
+
+    }
+
+	delay(medblink);
+	PlaneClear();
+	delay(medblink);
+
+  for(int i = 8; i <= 10; i++){
+
+    digitalWrite(i, HIGH);
+
+    }
+
+	delay(medblink);
+	PlaneClear();
+	delay(medblink);
+
+	digitalWrite(A1, HIGH);
+	digitalWrite(A2, LOW);
+
+  for(int i = 2; i <= 4; i++){
+
+    digitalWrite(i, HIGH);
+
+    }
+
+	delay(medblink);
+	PlaneClear();
+	delay(medblink);
+  
+  for(int i = 5; i <= 7; i++){
+
+    digitalWrite(i, HIGH);
+
+    }
+
+	delay(medblink);
+	PlaneClear();
+	delay(medblink);
+
+  for(int i = 8; i <= 10; i++){
+
+    digitalWrite(i, HIGH);
+
+    }
+
+	delay(medblink);
+	PlaneClear();
+	delay(medblink);
+
+
+	digitalWrite(A2, HIGH);		
+
 }
 
 void omniSweep(){
