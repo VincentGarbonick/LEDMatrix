@@ -3,7 +3,7 @@ void portInit(){
 
 //set 0-10 as outputs in order to route each positive column to
   
-  for(int i = 0; i <= 10;i++){
+  for(int i = 2; i <= 10;i++){
 
       pinMode(i,OUTPUT);
       

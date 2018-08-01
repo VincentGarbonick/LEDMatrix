@@ -9,8 +9,7 @@ portInit();
 
 void loop() {
 
-testFlash();
 
-delay(500);
+planeSweep();
 
 }
