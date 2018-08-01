@@ -9,7 +9,6 @@ portInit();
 
 void loop() {
 
-
-planeSweep();
+omniSweep();
 
 }
