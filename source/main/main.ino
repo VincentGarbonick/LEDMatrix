@@ -5,15 +5,27 @@ void setup() {
 
 portInit();
 
-digitalWrite(A0, LOW);
-digitalWrite(A1, LOW);
-digitalWrite(A2, LOW);
+planeInit();
 
 
 }
 
 void loop() {
 
-arcade();
+for(int i = 0; i <= 6; i++){
+	
+	arcade();
+
+}
+
+for (int i = 0; i <= 3; i++){
+	
+	omniSweep();
+	PlaneClear();
+
+}
+
+planeInit();
+
 
 }

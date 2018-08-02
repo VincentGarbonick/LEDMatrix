@@ -22,3 +22,12 @@ digitalWrite(A2, HIGH);
 
   
 }
+
+//sets all planes to low
+void planeInit(){
+
+  digitalWrite(A0, LOW);
+  digitalWrite(A1, LOW);
+  digitalWrite(A2, LOW);
+  
+}

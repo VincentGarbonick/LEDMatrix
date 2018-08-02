@@ -2,8 +2,8 @@
 #define medblink  200
 #define arcadeSpeed 60
 //60 is a good "arcade style" sweep speed......hmm
-//clears the plane it is is called on
 
+//clears the plane it is is called on
 void PlaneClear(){
   
   for(int i = 2; i <= 10;i++){
