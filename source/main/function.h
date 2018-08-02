@@ -1,5 +1,9 @@
 #define fastblink 30
-#define medblink 200
+#define medblink  200
+#define arcadeSpeed 60
+//60 is a good "arcade style" sweep speed......hmm
+//clears the plane it is is called on
+
 void PlaneClear(){
   
   for(int i = 2; i <= 10;i++){
@@ -9,15 +13,7 @@ void PlaneClear(){
     }
 }
 
-void testFlash(){
-  
-	digitalWrite(3, HIGH);
-	digitalWrite(A2,LOW);
-	delay(500);
-	digitalWrite(A2,HIGH);
-
-}
-
+//blinks each light in the matrix 
 void singleSweep(){
 
   
@@ -255,4 +251,64 @@ void omniSweep(){
 
 void omniFade(){
 	//sae as omnisweep, but uses PWM to fade in and out
+}
+
+void planeShift(){
+	
+	digitalWrite(2,LOW);
+	digitalWrite(3,HIGH);
+	digitalWrite(4,LOW);
+	
+	digitalWrite(5,HIGH);
+	digitalWrite(6,LOW);
+	digitalWrite(7,HIGH);
+
+	digitalWrite(8,LOW);
+	digitalWrite(9,HIGH);
+	digitalWrite(10,LOW);
+
+}
+
+void invPlaneShift(){
+
+	digitalWrite(2,HIGH);
+	digitalWrite(3,LOW);
+	digitalWrite(4,HIGH);
+	
+	digitalWrite(5,LOW);
+	digitalWrite(6,HIGH);
+	digitalWrite(7,LOW);
+
+	digitalWrite(8,HIGH);
+	digitalWrite(9,LOW);
+	digitalWrite(10,HIGH);
+
+}
+
+void fastArcade(){
+
+  planeShift();
+  delay(arcadeSpeed);
+  PlaneClear();
+
+  
+  
+  invPlaneShift();
+  delay(arcadeSpeed);
+  PlaneClear();
+
+}
+
+void arcade(){
+
+  planeShift();
+  delay(medblink);
+  PlaneClear();
+
+  
+  
+  invPlaneShift();
+  delay(medblink);
+  PlaneClear();
+
 }
